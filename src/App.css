@@ -1,0 +1,459 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("./images/bg.jpeg");
+  background-position: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: slide 20s linear 0s infinite alternate ;
+}
+@keyframes slide {
+  33.3% {
+    background-image: url(./images/bg.jpeg);
+    
+  }
+ 66.6% {
+    background-image: url(./images/bg2.jpeg);
+   
+  }
+  
+  100%{
+    background-image: url(./images/bg4.jpeg);
+   
+  }
+
+}
+
+#reg {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.425);
+  padding: 0px 30px;
+  padding-top: 20px;
+  margin-top: 50px;
+}
+
+#reg input {
+  min-width: 250px;
+  max-width: 500px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.425);
+}
+#reg button {
+  border-radius: 20px;
+  padding: 6px 22px;
+  min-width: 100px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#reg #d1 {
+  /* background: #000; */
+  flex-direction: column;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.425);
+  width: 100%;
+  margin-bottom: 10px;
+}
+#reg #d1 p {
+  margin-bottom: 0px;
+}
+#reg #d1 h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#reg #d2 {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  padding-bottom: 10px;
+}
+#reg #d2 p {
+  margin: 2px;
+}
+#reg button div {
+  height: 20px;
+  width: 20px;
+}
+#reg #nSer {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+#reg #nSer i {
+  font-size: 50px;
+  color: rgb(0, 149, 0);
+  margin: auto;
+  margin: 20px;
+}
+#reg #nSer h3 {
+  padding-bottom: 20px;
+}
+#home #logo {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.425);
+  position: absolute;
+  top: 0;
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0px 20px;
+}
+#home #logo img {
+  height: 100%;
+}
+#admin {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#admin #panel {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  flex-direction: column;
+  width: 100%;
+  z-index: 10000;
+  background: white;
+  min-height: 100vh;
+  align-items: center;
+}
+
+#admin #panel #search {
+  margin: 20px;
+  min-width: 300px;
+  margin-bottom: 0px;
+  display: flex;
+}
+#admin #panel #form {
+  /* background: #000; */
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  margin-top: 20px;
+  border-radius: 1rem;
+  border: 2px solid grey;
+  padding: 50px;
+  background-color: rgb(253, 253, 253);
+}
+#admin #panel #form div {
+}
+#admin #panel #heading {
+  width: 100%;
+  background-color: #0d6efd;
+  box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+#admin #panel #heading h3 {
+  margin: 10px;
+  color: white;
+  width: 60%;
+}
+#admin #panel #place {
+  margin: 20px;
+  margin-bottom: 0px;
+  color: #0d6efd;
+}
+#admin #panel #heading p {
+  margin: 10px;
+  width: 40%;
+  text-align: right;
+}
+#admin #panel #body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  flex-direction: column;
+}
+
+#admin #panel #body #info {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+
+  margin-top: 30px;
+}
+#admin #panel #body #info p {
+  background-color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  color: #0d6efd;
+  border: 2px solid #0d6efd;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  min-width: 100px;
+  transition: 0.3s ease;
+}
+#admin #panel #body #info .yes {
+  color: white !important;
+  background-color: #0d6efd;
+}
+#admin #panel #body #info p h3 {
+  text-align: center;
+}
+
+#admin #panel #body #info p {
+  margin-right: 10px;
+}
+
+table {
+  width: 750px;
+  border-collapse: collapse;
+  margin: 50px auto;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+th {
+  background: #0d6efd;
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-size: 18px;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  bottom: 0;
+  z-index: 100000 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#loading img {
+  width: 60px;
+}
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  table {
+    width: 90%;
+  }
+
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    /* Label the data */
+    content: attr(data-column);
+
+    color: #000;
+    margin-left: 20px;
+
+    font-weight: bold;
+  }
+}
+
+#nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid rgba(255, 255, 255, 0.425);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.687);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-direction: column;
+  height: 120px;
+  overflow: hidden;
+
+  /* overflow-x: scroll; */
+  width: 100%;
+}
+
+#nav #logo h3 {
+  font-weight: 800;
+  color: black;
+}
+#nav #logo{
+  height: 50px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* background: #000; */
+
+}
+#nav #logo img{
+  width: 100px;
+
+  zoom: 2;
+}
+#nav #tab {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+
+  display: flex;
+  align-content: center;
+  justify-content: flex-end;
+  height: 30px;
+}
+#nav #tab ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  border-radius: 50px;
+  height: 50px;
+  overflow-y: scroll;
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+}
+#nav #tab ul li {
+  margin-left: 2px;
+  max-width: 150px;
+  margin-right: 2px;
+  width: 100%;
+}
+#nav #tab ul li:nth-child(1) {
+  margin-left: 2px;
+}
+#nav #tab ul li:last-child {
+  margin-right: 10px;
+}
+#nav #tab ul li .link {
+  color: green;
+  text-decoration: none;
+  display: flex;
+  padding: 5px 10px;
+  transition: 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+#nav #tab ul li .act {
+  background-color: green;
+  color: white;
+  border-radius: 20px;
+}
