@@ -19,6 +19,7 @@ function App() {
         {/* <Route path="/event" element={<Event />}/>  */}
         <Route path="/info" element={<Info />} />
         <Route path="/admin-panel" element={<Admin />} />
+        <Route path="/surapuradada-frontend" element={<Event/>}/>
       </Routes>
     </>
   );

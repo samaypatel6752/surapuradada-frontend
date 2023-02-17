@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Loading from './Loading'
 
 const Event = () => {
   const navigate = useNavigate()
   const [data,setdata] = useState("")
   useEffect(()=>{
-    const data = localStorage.getItem("data")
-    console.log(data);
-    setdata(data)
+    navigate("/")
   },[])
   return (
     <>
-    <h1>Hello </h1>
-    
+    <Loading/>
     </>
   )
 }
