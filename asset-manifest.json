@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/surapuradada-frontend/static/css/main.fa803e24.css",
-    "main.js": "/surapuradada-frontend/static/js/main.e4328d30.js",
+    "main.js": "/surapuradada-frontend/static/js/main.faf71bc4.js",
     "static/media/bg.jpeg": "/surapuradada-frontend/static/media/bg.4d7a9202042920960da7.jpeg",
     "static/media/loading.gif": "/surapuradada-frontend/static/media/loading.88a8a2aff40f58147d45.gif",
     "static/media/bg2.jpeg": "/surapuradada-frontend/static/media/bg2.36bc3cb32a1ed4f55c86.jpeg",
@@ -9,10 +9,10 @@
     "static/media/logo.png": "/surapuradada-frontend/static/media/logo.88ffef45008befa5e0fb.png",
     "index.html": "/surapuradada-frontend/index.html",
     "main.fa803e24.css.map": "/surapuradada-frontend/static/css/main.fa803e24.css.map",
-    "main.e4328d30.js.map": "/surapuradada-frontend/static/js/main.e4328d30.js.map"
+    "main.faf71bc4.js.map": "/surapuradada-frontend/static/js/main.faf71bc4.js.map"
   },
   "entrypoints": [
     "static/css/main.fa803e24.css",
-    "static/js/main.e4328d30.js"
+    "static/js/main.faf71bc4.js"
   ]
 }
