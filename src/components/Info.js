@@ -37,22 +37,20 @@ const Info = () => {
                       await fetch("https://surapuradada.vercel.app/api/verifier", {
                         method: "POST",
                         headers: {
-                          Accept: "application/json",
+                          "Accept": "application/json",
                           "Content-Type": "application/json",
                         },
                         body: JSON.stringify({
                           name: RawData.name,
                           village: RawData.village,
                           phNo: RawData.phNo,
-            
                           tokenId: RawData.tokenId,
                           date: RawData.date,
                           key: "samay@6751@guru@bapasitaram_9898134603",
                         }),
                       })
-                        .then((data) => data.json())
+                        .then((data) => {console.log(data.json); return data.json()})
                         .then((parsed) => {
-                          
                           if (!parsed) {
                            const del = async()=> {
                               let idb =await indexedDB.open('db', 1)
@@ -80,7 +78,20 @@ const Info = () => {
                             }
                               del()
                           }
-                        });
+                        }).catch(err => {
+                          const del = async()=> {
+                            let idb =await indexedDB.open('db', 1)
+                            idb.onsuccess =async () => {
+                                let res =await idb.result;
+                                let tx =await res.transaction('data', 'readwrite')
+                                let store =await tx.objectStore('data')
+                                await store.delete(curRes.key)
+                                await navigate("/");
+                                
+                            }
+                          }
+                            del()
+                        })
                     }
                   };
                   verify();

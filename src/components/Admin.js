@@ -150,6 +150,32 @@ const Admin = () => {
       });
   };
 
+  const deleteR = async (name, phNo, date, tokenId, q) => {
+    setLoading(true);
+
+    await fetch(api + "api/delete", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        phNo,
+        date,
+        tokenId,
+        q,
+        key: "samay@6751@guru@bapasitaram_9898134603",
+      }),
+    })
+      .then((data) => data.json())
+      .then((json) => {
+        if (json.type=="error"){
+          setRefresh1(refresh1+1)
+          setRefresh2(refresh2+1)
+        }
+      });
+  };
   return (
     <>
       {loading ? <Loading /> : ""}
@@ -427,12 +453,26 @@ const Admin = () => {
                                       >
                                         <i className="fa-regular fa-check"></i>
                                       </button>
-
+                                      <button
+                                        type="button"
+                                        className={`btn btn-outline-danger`}
+                                        onClick={() => {
+                                          deleteR(
+                                            item.name,
+                                            item.phNo,
+                                            item.date,
+                                            item.tokenId,
+                                            item.task
+                                          );
+                                        }}
+                                      >
+                                        <i class="fa-regular fa-trash"></i>
+                                      </button>
                                       <button
                                         type="button"
                                         className={`btn btn-${
                                           item.task == "c" ? "outline-" : ""
-                                        }danger`}
+                                        }primary`}
                                         onClick={() => {
                                           updateR(
                                             item.name,
@@ -632,9 +672,24 @@ const Admin = () => {
 
                                       <button
                                         type="button"
+                                        className={`btn btn-outline-danger`}
+                                        onClick={() => {
+                                          deleteR(
+                                            item.name,
+                                            item.phNo,
+                                            item.date,
+                                            item.tokenId,
+                                            item.task
+                                          );
+                                        }}
+                                      >
+                                        <i class="fa-regular fa-trash"></i>
+                                      </button>
+                                      <button
+                                        type="button"
                                         className={`btn btn-${
                                           item.task == "c" ? "outline-" : ""
-                                        }danger`}
+                                        }primary`}
                                         onClick={() => {
                                           updateR(
                                             item.name,
