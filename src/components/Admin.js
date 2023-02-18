@@ -200,6 +200,7 @@ const Admin = () => {
                       aria-label="Sizing example input"
                       placeholder="Enter Admin passowrd"
                       value={pass}
+                      autoFocus
                       onChange={(e) => {
                         setpass(e.target.value);
                       }}
