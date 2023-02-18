@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { json, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import logo from "../images/logo.png";
 import Loading from "./Loading";
 const Info = () => {
@@ -11,6 +11,9 @@ const Info = () => {
       let idb =await indexedDB.open("db", 1);
       idb.onsuccess =async () => {
         let res =await idb.result;
+        if (await res.objectStoreNames.length==0){
+          navigate("/")
+        }
         let tx =await res.transaction("data", "readonly");
         let store =await tx.objectStore("data");
         let cursor =await store.openCursor();
